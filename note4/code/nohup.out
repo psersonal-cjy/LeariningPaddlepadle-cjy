@@ -1,0 +1,37 @@
+I0516 20:38:50.154063 18469 Util.cpp:166] commandline:  --use_gpu=False --trainer_count=2 
+[INFO 2018-05-16 20:38:50,159 layers.py:2689] output for __conv_0__: c = 64, h = 32, w = 32, size = 65536
+[INFO 2018-05-16 20:38:50,161 layers.py:2689] output for __conv_1__: c = 64, h = 32, w = 32, size = 65536
+[INFO 2018-05-16 20:38:50,163 layers.py:2829] output for __pool_0__: c = 64, h = 16, w = 16, size = 16384
+[INFO 2018-05-16 20:38:50,164 layers.py:2689] output for __conv_2__: c = 128, h = 16, w = 16, size = 32768
+[INFO 2018-05-16 20:38:50,165 layers.py:2689] output for __conv_3__: c = 128, h = 16, w = 16, size = 32768
+[INFO 2018-05-16 20:38:50,165 layers.py:2829] output for __pool_1__: c = 128, h = 8, w = 8, size = 8192
+[INFO 2018-05-16 20:38:50,166 layers.py:2689] output for __conv_4__: c = 256, h = 8, w = 8, size = 16384
+[INFO 2018-05-16 20:38:50,169 layers.py:2689] output for __conv_5__: c = 256, h = 8, w = 8, size = 16384
+[INFO 2018-05-16 20:38:50,170 layers.py:2689] output for __conv_6__: c = 256, h = 8, w = 8, size = 16384
+[INFO 2018-05-16 20:38:50,170 layers.py:2829] output for __pool_2__: c = 256, h = 4, w = 4, size = 4096
+[INFO 2018-05-16 20:38:50,171 layers.py:2689] output for __conv_7__: c = 512, h = 4, w = 4, size = 8192
+[INFO 2018-05-16 20:38:50,172 layers.py:2689] output for __conv_8__: c = 512, h = 4, w = 4, size = 8192
+[INFO 2018-05-16 20:38:50,173 layers.py:2689] output for __conv_9__: c = 512, h = 4, w = 4, size = 8192
+[INFO 2018-05-16 20:38:50,174 layers.py:2829] output for __pool_3__: c = 512, h = 2, w = 2, size = 2048
+[INFO 2018-05-16 20:38:50,176 layers.py:2689] output for __conv_10__: c = 512, h = 2, w = 2, size = 2048
+[INFO 2018-05-16 20:38:50,177 layers.py:2689] output for __conv_11__: c = 512, h = 2, w = 2, size = 2048
+[INFO 2018-05-16 20:38:50,179 layers.py:2689] output for __conv_12__: c = 512, h = 2, w = 2, size = 2048
+[INFO 2018-05-16 20:38:50,181 layers.py:2829] output for __pool_4__: c = 512, h = 1, w = 1, size = 512
+I0516 20:38:50.289654 18469 GradientMachine.cpp:94] Initing parameters..
+I0516 20:38:52.151423 18469 GradientMachine.cpp:101] Init parameters done.
+F0516 20:39:06.631289 18491 Matrix.cpp:3688] Check failed: (size_t)lbl[i] < dim (99 vs. 3) 
+*** Check failure stack trace: ***
+    @     0x7f57763d39cd  google::LogMessage::Fail()
+    @     0x7f57763d747c  google::LogMessage::SendToLog()
+    @     0x7f57763d34f3  google::LogMessage::Flush()
+    @     0x7f57763d898e  google::LogMessageFatal::~LogMessageFatal()
+    @     0x7f5776323422  paddle::CpuMatrix::oneHotCrossEntropy()
+    @     0x7f5776149e15  paddle::CostLayer::forward()
+    @     0x7f5776188efd  paddle::NeuralNetwork::forward()
+    @     0x7f57761aa6e4  paddle::TrainerThread::forward()
+    @     0x7f57761ab945  paddle::TrainerThread::computeThread()
+    @     0x7f57899c6c5c  execute_native_thread_routine_compat
+    @     0x7f579c80d6ba  start_thread
+    @     0x7f579be3341d  clone
+    @              (nil)  (unknown)
+cost
