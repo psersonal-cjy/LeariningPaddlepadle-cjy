@@ -23,7 +23,7 @@ with_gpu = os.getenv('WITH_GPU', '0') != '0'
 
 def main():
     datadim = 3 * 32 * 32
-    classdim = 100
+    classdim = 101
     imageSize = 32
     myReader = MyReader(imageSize=imageSize)
 
